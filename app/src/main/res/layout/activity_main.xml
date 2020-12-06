@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_main_fragment_re"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14" />
+
+    <RadioGroup
+        android:id="@+id/activity_main_tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#dcdcdc"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/activity_main_tab1"
+            style="@style/Theme.Applead"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_dashboard_black_24dp"
+            android:gravity="center_horizontal"
+            android:text="头条" />
+
+        <RadioButton
+            android:id="@+id/activity_main_tab2"
+            style="@style/Theme.Applead"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_dashboard_black_24dp"
+            android:gravity="center_horizontal"
+            android:text="星座" />
+
+        <RadioButton
+            android:id="@+id/activity_main_tab3"
+            style="@style/Theme.Applead"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_dashboard_black_24dp"
+            android:gravity="center_horizontal"
+            android:text="模块" />
+
+        <RadioButton
+            android:id="@+id/activity_main_tab4"
+            style="@style/Theme.Applead"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_dashboard_black_24dp"
+            android:gravity="center_horizontal"
+            android:text="账号" />
+    </RadioGroup>
+</LinearLayout>

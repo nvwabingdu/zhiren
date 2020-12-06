@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zqr">
+
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Zqr">
+        <!--volley框架：在 Android 6.0 中，我们取消了对 Apache HTTP 客户端的支持  需要用的话 要添加如下-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name=".views.login.leadpage.LeadViewPagesActivity"
+            android:theme="@style/Theme.Applead"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.eng.EngMainActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".views.login.LoginActivity"></activity>
+        <activity android:name=".model.http.basehttp.MyHttpActivity"></activity>
+        <activity android:name=".model.http.zqrokhttp.OkHttpActivity"></activity>
+        <activity android:name=".model.http.zqrretrofit.MyRetrofitActivity"></activity>
+        <activity android:name=".views.ui.news.WebViewActivity"></activity>
+    </application>
+
+    <!--    网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>
