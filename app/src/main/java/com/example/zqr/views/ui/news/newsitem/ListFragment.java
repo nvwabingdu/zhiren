@@ -76,7 +76,7 @@ public class ListFragment extends Fragment {
                     Tools.showToast(getActivity(),Singleton.getInstance().TAG+e.toString(),2000);
                 }
                 //item点击事件 跳转到webView
-                recyClerViewAdapter.getComeback(new RecyClerViewAdapter.Comeback() {
+                recyClerViewAdapter.getCallback(new RecyClerViewAdapter.Callback() {
                     @Override
                     public void onItemClick(View view, int position) {
                         MainActivity mainactivity = (MainActivity) getActivity();

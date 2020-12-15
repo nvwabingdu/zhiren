@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <shape
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+
+        <!-- 圆角的半径 -->
+        <corners android:radius="10dp"/>
+
+        <!-- 填充颜色 -->
+        <solid android:color="#3a8fea"/>
+
+    <!-- 实线边框 -->
+    <stroke
+        android:width="5dp"
+        android:color="#666666" />
+
+<!--    &lt;!&ndash; 边框的宽度,每段虚线的长度，和两段虚线之间的间隔和颜色 &ndash;&gt;-->
+<!--    <stroke-->
+<!--        android:width="2dp"-->
+<!--        android:dashWidth="6dp"-->
+<!--        android:dashGap="6dp"-->
+<!--        android:color="#e75050" />-->
+
+<!--    &lt;!&ndash; 圆角的半径，左上/右下实现圆角 &ndash;&gt;-->
+<!--    <corners-->
+<!--        android:topLeftRadius="10dp"-->
+<!--        android:bottomRightRadius="10dp"/>-->
+
+<!--    &lt;!&ndash;渐变&ndash;&gt;-->
+<!--    <gradient-->
+<!--        android:angle="integer"-->
+<!--        android:centerX="Float"-->
+<!--        android:centerY="Float"-->
+<!--        android:centerColor="integer"-->
+<!--        android:startColor="color"-->
+<!--        android:endColor="color"-->
+<!--        android:gradientRadius="integer"-->
+<!--        android:type="linear"-->
+<!--        android:usesLevel="true" />-->
+
+
+    <!--angle：角度，当 android:type=“linear”时有效 ，以45度为单位，逆时针方向旋转
+    centerX：Float。渐变色中心的 X 相对位置（ 0-1.0 ）。当 android:type=“linear”时无效
+    centerY：Float。渐变色中心的 Y 相对位置（ 0-1.0 ）。当 android:type=“linear”时无效
+    centerColor：color。可选的颜色，出现在 start 和 end 颜色之间。
+    gradientRadius：Float。渐变色的半径。当 android:type=“radial” 时有效。
+    startcolor：开始的颜色
+    endcolor：结束的颜色
+    type：渐变色的样式。有效值为：
+    “linear”：线性渐变，默认值
+    “radial”：环形渐变。 start 颜色是处于中间的颜色
+    “sweep”：扇形渐变
+    useLevel：Boolean。“ true ”表示可以当作 LevelListDrawable 使用-->
+
+
+    </shape>

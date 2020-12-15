@@ -77,8 +77,8 @@ public class RecyClerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (comeback != null) {
-                    comeback.onItemClick(v, position);
+                if (callback != null) {
+                    callback.onItemClick(v, position);
                 }
             }
         });
@@ -171,7 +171,7 @@ public class RecyClerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     /**
      * 回调    先创建接口
      */
-    public interface Comeback {
+    public interface Callback {
         void onItemClick(View view, int position);
     }
 
@@ -179,9 +179,9 @@ public class RecyClerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     /**
      * @param jie 注册接口
      */
-    private Comeback comeback;
-    public void getComeback(Comeback comeback) {
-        this.comeback = comeback;
+    private Callback callback;
+    public void getCallback(Callback callback) {
+        this.callback = callback;
     }
 
 

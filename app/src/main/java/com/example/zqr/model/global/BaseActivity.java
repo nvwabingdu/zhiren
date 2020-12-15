@@ -242,14 +242,19 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param backStack
      */
     public void fragmentReplace(int target, Fragment toFragment, boolean backStack) {
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        String toClassName = toFragment.getClass().getSimpleName();
-        if (manager.findFragmentByTag(toClassName) == null) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+
+        String toClassName = toFragment.getClass().getSimpleName();//获取toClassName的名字
+
+        if (fm.findFragmentByTag(toClassName) == null) {
+
             transaction.replace(target, toFragment, toClassName);
+
             if (backStack) {
                 transaction.addToBackStack(toClassName);
             }
+
             transaction.commit();
         }
     }
@@ -261,20 +266,19 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param toFragment
      */
     public void smartFragmentReplace(int target, Fragment toFragment) {
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
         /*如有当前在使用的->隐藏当前的*/
         if (currentFragment != null) { transaction.hide(currentFragment); }
         String toClassName = toFragment.getClass().getSimpleName();
         /*toFragment之前添加使用过->显示出来*/
-        if (manager.findFragmentByTag(toClassName) != null) { transaction.show(toFragment); } else {
+        if (fm.findFragmentByTag(toClassName) != null) { transaction.show(toFragment); } else {
             /*toFragment还没添加使用过->添加上去*/
             transaction.add(target, toFragment, toClassName); }
         transaction.commit();
         /*toFragment更新为当前的*/
         currentFragment = toFragment;
     }
-
 
 }
 

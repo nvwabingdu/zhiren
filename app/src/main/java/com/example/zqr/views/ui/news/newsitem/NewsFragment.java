@@ -26,7 +26,6 @@ import java.util.List;
  * Time: 20:11
  */
 public class NewsFragment extends Fragment {
-    private DrawerLayout mDrawerLayout;
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private View view;
@@ -37,7 +36,7 @@ public class NewsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_main_news, container, false);
+        view=inflater.inflate(R.layout.fragment_main_news, null);
         return view;
     }
 
@@ -45,20 +44,9 @@ public class NewsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        mDrawerLayout = (DrawerLayout) view.findViewById(R.id.dl_main_drawer);
         mTabLayout = view.findViewById(R.id.tabs);
         //初始化viewpager
         initViewPager();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 

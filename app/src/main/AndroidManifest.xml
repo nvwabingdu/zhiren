@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.eng.EngMainActivity"></activity>
+        <activity android:name=".views.ui.eng.EngFragment"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".views.login.LoginActivity"></activity>
         <activity android:name=".model.http.basehttp.MyHttpActivity"></activity>

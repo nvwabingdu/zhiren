@@ -28,5 +28,6 @@ public class Singleton {
     public  String TAG="智人：";
     public  String BaseUrl="http://v.juhe.cn/toutiao/";
     public  String NewsKey="2131f22f6c1e2cec174d8c7b803770c5";
+    public  Boolean wordFlag=true;
 
 }
